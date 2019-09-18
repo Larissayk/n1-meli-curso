@@ -1,0 +1,1 @@
+mongoimport --db reprograma -c alunas --jsonArray --file alunas.json

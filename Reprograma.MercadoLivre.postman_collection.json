@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "4d97f795-fa1a-4444-8d1b-bac8860e5b51",
+		"name": "Reprograma.MercadoLivre",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Alunas",
+			"item": [
+				{
+					"name": "Alunas.Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/alunas",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"alunas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alunas.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/alunas/5d82c1df66960f37580a0f51",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"alunas",
+								"5d82c1df66960f37580a0f51"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alunas.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"habilidades\": [\r\n        \"BackEnd\",\r\n        \"Banco de Dados\",\r\n        \"Java\",\r\n        \"C#\",\r\n        \"Mobile\",\r\n        \"NodeJS\",\r\n        \"API\"\r\n    ],\r\n    \"nome\": \"Aluna 20\",\r\n    \"data_nascimento\": \"1993-03-18T08:30:00.000Z\",\r\n    \"signo\": \"Peixes\",\r\n    \"ativa\": true\r\n}"
+						},
+						"url": {
+							"raw": "localhost:5000/api/alunas",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"alunas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
