@@ -43,6 +43,7 @@ router.get("/", (req, res) => {
   }
 });
 
+
 router.get("/:id", (req, res) => {
   try {
     alunas.findById(req.params.id, (err, postit) => {
@@ -54,6 +55,32 @@ router.get("/:id", (req, res) => {
   }
 });
 
+/**
+ * @api {post} /alunas Cadastrar Aluna
+ * @apiGroup Alunas
+ *
+ * @apiSuccess {Object{}} Object{} Aluna cadastrada
+ * 
+ * @apiSuccessExample {json} Sucesso
+ *    HTTP/1.1 200 OK
+ * {
+ *       "habilidades": [
+*          "FrontEnd",
+*         "HTML",
+*        "CSS",
+*       "JavaScript",
+*      "React",
+*     "Wordpress",
+*     "API"
+* ],
+* "_id": "5d835f7589368f270023e8be",
+* "nome": "Aluna 21",
+* "data_nascimento": "1993-03-18T08:30:00.000Z",
+* "signo": "Peixes",
+* "ativa": false
+*}
+ *
+ */
 router.post("/", (req, res) => {
   let newPostit = new alunas({
     nome: req.body.nome,

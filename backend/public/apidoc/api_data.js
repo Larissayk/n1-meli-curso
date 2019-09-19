@@ -37,5 +37,35 @@ define({ "api": [
     "filename": "alunas/routes.js",
     "groupTitle": "Alunas",
     "name": "GetAlunas"
+  },
+  {
+    "type": "post",
+    "url": "/alunas",
+    "title": "Cadastrar Aluna",
+    "group": "Alunas",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "teste",
+            "optional": false,
+            "field": "Object",
+            "description": "<p>{} Aluna cadastrada</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Sucesso",
+          "content": "   HTTP/1.1 200 OK\n{\n      \"habilidades\": [\n         \"FrontEnd\",\n        \"HTML\",\n       \"CSS\",\n      \"JavaScript\",\n     \"React\",\n    \"Wordpress\",\n    \"API\"\n],\n\"_id\": \"5d835f7589368f270023e8be\",\n\"nome\": \"Aluna 21\",\n\"data_nascimento\": \"1993-03-18T08:30:00.000Z\",\n\"signo\": \"Peixes\",\n\"ativa\": false\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "alunas/routes.js",
+    "groupTitle": "Alunas",
+    "name": "PostAlunas"
   }
 ] });
