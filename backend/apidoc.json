@@ -1,0 +1,8 @@
+{
+    "name": "Reprograma - Alunas",
+    "version": "1.0.0",
+    "description": "API Reprograma",
+    "template": {
+        "forceLanguage": "en"
+    }
+}

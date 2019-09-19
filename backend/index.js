@@ -4,6 +4,8 @@ const alunasRoute = require("./alunas/routes.js");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+app.use(express.static("public"));
+
 var mongoose = require("mongoose");
 // mongoose.connect("mongodb://localhost:27017/reprograma");
 mongoose.connect("mongodb://reprograma:reprograma13@ds155651.mlab.com:55651/reprograma");
@@ -27,6 +29,7 @@ app.use(function(req, res, next) {
 });
 
 app.use(express.json());
+
 app.use("/api/alunas", alunasRoute);
 
 app.listen(PORT, () => console.log(`Ouvindo na porta ${PORT}...`));

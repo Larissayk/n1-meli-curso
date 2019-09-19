@@ -2,6 +2,31 @@ const express = require("express");
 const alunas = require("./alunas.js");
 const router = express.Router();
 
+/**
+ * @api {get} /alunas Lista todas as alunas
+ * @apiGroup Alunas
+ * @apiSuccess {Object[]} alunas Lista Alunas
+ * @apiSuccessExample {json} Success
+ *    HTTP/1.1 200 OK
+ *    [{
+ *       "habilidades": [
+*          "FrontEnd",
+*         "HTML",
+*        "CSS",
+*       "JavaScript",
+*      "React",
+*     "Wordpress",
+*     "API"
+* ],
+* "_id": "5d835f7589368f270023e8be",
+* "nome": "Aluna 21",
+* "data_nascimento": "1993-03-18T08:30:00.000Z",
+* "signo": "Peixes",
+* "ativa": false
+*}]
+ * @apiErrorExample {json} List error
+ *    HTTP/1.1 500 Internal Server Error
+ */
 router.get("/", (req, res) => {
   try {
     alunas.find((error, response) => {
