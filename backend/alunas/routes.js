@@ -39,7 +39,6 @@ router.post("/", (req, res) => {
   });
 
   try {
-   
     newPostit.save(err => {
       if (err) {
         res.send(err);

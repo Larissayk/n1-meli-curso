@@ -5,7 +5,8 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/reprograma");
+// mongoose.connect("mongodb://localhost:27017/reprograma");
+mongoose.connect("mongodb://reprograma:reprograma13@ds155651.mlab.com:55651/reprograma");
 
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
