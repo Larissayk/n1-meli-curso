@@ -1,0 +1,3 @@
+https://guarded-spire-33189.herokuapp.com/apidoc/
+
+https://guarded-spire-33189.herokuapp.com/api/alunas
